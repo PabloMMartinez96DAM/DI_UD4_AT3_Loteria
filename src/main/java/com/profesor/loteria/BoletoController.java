@@ -49,6 +49,7 @@ public class BoletoController implements Initializable {
 
     }
 
+    //Método para cerra la ventan actual
     public void handlerCerrarVentana(ActionEvent actionEvent) {
 
         Stage currentStage = (Stage) this.field1.getScene().getWindow();

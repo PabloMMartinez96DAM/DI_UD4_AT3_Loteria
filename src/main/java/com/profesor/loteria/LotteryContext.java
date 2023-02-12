@@ -3,14 +3,16 @@ package com.profesor.loteria;
 public final class LotteryContext {
 
     //Properties
+
+
+    //Instancia de la propia clase LotteryContext
     private static LotteryContext instance;
 
 
-    //Número de la lotería con el formato correcto
+    //Número de la lotería obtenido del MainViewController
     private String lotteryNumber;
 
-
-
+    //Método para obtener la instancia actual y crear una en caso de que no se haya invocado nunca
     public static LotteryContext getInstance() {
 
         if(instance == null){
@@ -19,13 +21,13 @@ public final class LotteryContext {
         return instance;
     }
 
-
+    //Getters & Setters
     public String getLotteryNumber() {
         return lotteryNumber;
     }
 
+    //Recibe el número de lotería del usuario y lo formatea para su uso en el BoletoController
     public void setLotteryNumber(String lotteryNumber) {
-
         //Obtengo los números en formato entero para poder formatearlos
         int numbers = Integer.parseInt(lotteryNumber);
 
